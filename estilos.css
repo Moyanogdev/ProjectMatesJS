@@ -1,0 +1,9 @@
+.imgCarrito{
+    width: 80px;
+    height: 80px;
+}
+
+.borrar_producto{
+    background-color: rgb(165, 19, 19);
+    color: white;
+}
