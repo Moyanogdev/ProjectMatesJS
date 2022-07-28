@@ -155,6 +155,22 @@ function vaciar_carrito(){
 
 }
 
+// Fetch utilizando API de Clima
+
+let contenedor = document.getElementById("clima");
+
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Córdoba&lang=es&units=metric&appid=a2af7fc4bf2b575d4116c7b51cd859e5")
+    .then(response =>response.json())
+    .then(data =>{
+        contenedor.innerHTML = `<p>Ciudad: ${data.name}</p>
+                                <p>Clima: ${data.weather[0].description}</p>
+                                <p>La temperatura máxima es: ${data.main.temp_max}</p>
+                                <p>La temperatura mínima es: ${data.main.temp_min}</p>
+                                <p>Sensación térmica: ${data.main.feels_like}</p>
+                                <p>Humedad: ${data.main.humidity}</p>`
+
+    });
+
 
 
 
