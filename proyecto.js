@@ -1,48 +1,4 @@
 
-// Función de Bienvenida al usuario.
-function bienvenida(){
-
-    let usuario = document.getElementById("nombre_usuario");
-    let apellido = document.getElementById("apellido_usuario");
-    let email = document.getElementById("email_usuario");
-
-    console.log("Nombre: " , usuario.value);
-    console.log("Apellido: " , apellido.value);
-    console.log("Email registrado: " , email.value);
-
-    Swal.fire({
-        icon: "success",
-        text: "BIENVENIDO A MOYA MATES",
-        imageUrl: './img/logo.png',
-        imageWidth: 250,
-        imageHeight: 150,
-        imageAlt: 'Logo de la marca',
-    });
-}
-
-// Función Remover datos cargados del usuario. Nota: No funciona correctamente.
-function remover(){
-    let usuario = document.getElementById("nombre_usuario");
-    let apellido = document.getElementById("apellido_usuario");
-    let email = document.getElementById("email_usuario");
-
-    console.log("Se ha eliminado el nombre: " , usuario.value);
-    console.log("Se ha eliminado el apellido: " , apellido.value);
-    console.log("Email eliminado: " , email.value);
-
-
-}
-
-let boton_uno = document.getElementById("boton_ingresar");
-let boton_dos = document.getElementById("boton_borrar");
-
-boton_uno.addEventListener("click" , bienvenida);
-//boton_dos.addEventListener("click" , remover);
-
-
-
-
-
 // Carrito de compras
 
 let botones_compra = document.querySelectorAll(".botonAgregar");
@@ -154,22 +110,6 @@ function vaciar_carrito(){
     
 
 }
-
-// Fetch utilizando API de Clima
-
-let contenedor = document.getElementById("clima");
-
-fetch("https://api.openweathermap.org/data/2.5/weather?q=Córdoba&lang=es&units=metric&appid=a2af7fc4bf2b575d4116c7b51cd859e5")
-    .then(response =>response.json())
-    .then(data =>{
-        contenedor.innerHTML = `<p>Ciudad: ${data.name}</p>
-                                <p>Clima: ${data.weather[0].description}</p>
-                                <p>La temperatura máxima es: ${data.main.temp_max}</p>
-                                <p>La temperatura mínima es: ${data.main.temp_min}</p>
-                                <p>Sensación térmica: ${data.main.feels_like}</p>
-                                <p>Humedad: ${data.main.humidity}</p>`
-
-    });
 
 
 
