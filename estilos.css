@@ -11,7 +11,8 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+
     height: 60%;
     object-fit: cover;
 }
@@ -20,18 +21,20 @@
     background-color: black;
 }
 
+h6{
+    color: rgb(65, 65, 65);
+}
 
 .borrar_producto{
     background-color: rgb(165, 19, 19);
     color: white;
 }
 
-.card{
-    border: solid;
-}
-
 .card:hover{
-    border-color: red;
+    box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    transition: 0.5s;
 }
 
 
@@ -50,3 +53,4 @@ footer{
     font-size: 30px;
     margin-inline: 6px;
 }
+
