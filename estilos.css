@@ -1,6 +1,4 @@
 
-/* Algunos Estilos Generales */
-
 #imgLogo{
     border-color: black;
     border-style: solid;
@@ -15,6 +13,10 @@
 
     height: 60%;
     object-fit: cover;
+}
+
+.home{
+    font-weight: bold;
 }
 
 .fondoBlack{
@@ -54,3 +56,23 @@ footer{
     margin-inline: 6px;
 }
 
+.productosTabla{
+    display: flex;
+}
+
+.productosTabla img{
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.cantidadTabla input{
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
