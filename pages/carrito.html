@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="../img/favIconLogo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Ubuntu:ital,wght@0,300;0,500;1,300;1,400&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Carrito de Compras | Moya Mates</title>
+</head>
+<body>
+
+    <!-- Barra de navegación superior -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container d-flex justify-content-between">
+                <a class="navbar-brand" href="#">
+                    <img src="../img/logo.png" alt="Imagen Logo" width="180" height="100" class="d-inline-block" id="imgLogo">
+                </a>
+                <div class="nav align-items-center">
+                    <a class="nav-link active bg-light text-dark home" type="button" href="../index.html">HOME</a>
+                    <a class="nav-link bg-light" type="button" href="carrito.html">
+                        <img src="../img/bolsaCarrito.png" alt="" width="40" height="40">
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    
+
+    <div class="container mb-5 mt-5 pt-5">
+        <div class="text-center mt-5 mb-5">
+            <h1 class="text-dark">VERIFICA TU COMPRA</h1>
+        </div>
+        <table class="table table-dark table-hover text-white">
+            <thead>
+                <tr class="text-white">
+                    <th scope="col">#</th>
+                    <th scope="col">Productos</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+            
+            
+            
+            </tbody>
+        </table>
+
+        <div class="row mx-4">
+            <div class="col">
+                <h3 class="carritoTotal">Total Compra: 0</h3>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button class="btn btn-success" id="botonComprar">COMPRAR</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="fondoBlack py-5">
+        <div class="container">
+            <div class="row m-auto">
+                <div class="col-12 text-center text-white mb-5">
+                    <h1>GRACIAS POR ELEGIRNOS</h1>
+                </div>
+            </div>
+            <div>
+                <div id="imgCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <img src="../img/mate4.jpeg" class="d-block w-100 imgIntro" alt="">  
+                        </div>
+                    
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="../img/mate5.jpeg" class="d-block w-100 imgIntro" alt="">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="../img/mateAlfajor.jpg" class="d-block w-100 imgIntro" alt="">
+                        </div>
+                    </div>
+                    <!--Botones para avanzar y retroceder en el carousel de imágenes - bootstrap-->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#imgCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Inicio Footer de la página -->
+    <footer class="footerNav bg-light text-dark pt-3">
+        <div class="container-lg">
+            <div class="row align-items-center justify-items-between">
+                <div class="col-md-4 mb-4 text-center">
+                    <img src="../img/imgMateFooter.png" alt="" width="150" height="150">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="d-flex">
+                        <p>Muchas Gracias por Visitarnos.</p>
+                    </div>
+                    <div class="d-flex">
+                        <p>2022 Moya Mates. Todos los derechos reservados.</p>
+                    </div>
+          
+                </div>
+                <div class="col-md-4 mb-3 text-center">
+                    <i class="bi bi-whatsapp iconFooter"></i>
+                    <i class="bi bi-instagram iconFooter"></i>
+                    <i class="bi bi-facebook iconFooter"></i>
+                </div>
+  
+            </div>
+  
+        </div>
+  
+    </footer>
+
+
+    <!--Script Librería Toastify JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- CDN Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- Relacionado a la hoja de JS. -->
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

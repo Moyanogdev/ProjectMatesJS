@@ -7,10 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="icon" type="image/png" href="./img/favIconLogo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Ubuntu:ital,wght@0,300;0,500;1,300;1,400&family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="./css/estilos.css">
     <title>Tienda Moya Mates</title>
 </head>
 <body>
@@ -22,9 +25,9 @@
                 <a class="navbar-brand" href="#">
                     <img src="./img/logo.png" alt="Imagen Logo" width="180" height="100" class="d-inline-block" id="imgLogo">
                 </a>
-                <div class="nav nav-pills align-items-center" role="presentation">
-                    <a class="nav-link active bg-light text-dark home" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">HOME</a>
-                    <a class="nav-link bg-light" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                <div class="nav align-items-center">
+                    <a class="nav-link active bg-light text-dark home" type="button" href="index.html">HOME</a>
+                    <a class="nav-link bg-light" type="button" href="./pages/carrito.html">
                         <img src="./img/bolsaCarrito.png" alt="" width="40" height="40">
                     </a>
                 </div>
@@ -105,9 +108,9 @@
             </div>
         </section>
 
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active py-5"id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <h1 class="mt-5 mb-5 text-center">TIENDA</h1>
+        
+        <section>
+            <h1 class="mt-5 mb-5 text-center">TIENDA</h1>
                 <div class="container">
                     <div class="row row-cols-md-4 row-cols-lg-4">
                         <div class="col-6 d-flex justify-content-center mb-4">
@@ -258,83 +261,9 @@
         
         
                 </div>
-            </div>
-        
+        </section>
+            
 
-            <div class="tab-pane fade carrito mt-5 pt-5" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="container mb-5">
-                    <div class="text-center mb-5">
-                        <h1 class="text-dark">VERIFICA TU COMPRA</h1>
-                    </div>
-                    <table class="table table-dark table-hover">
-                        <thead>
-                            <tr class="text-white">
-                                <th scope="col">#</th>
-                                <th scope="col">Productos</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Cantidad</th>
-                            </tr>
-                        </thead>
-                        <tbody class="tbody">
-                        
-                        
-                        
-                        </tbody>
-                    </table>
-
-                    <div class="row mx-4">
-                        <div class="col">
-                            <h3 class="carritoTotal">Total Compra: 0</h3>
-                        </div>
-                        <div class="col d-flex justify-content-end">
-                            <button class="btn btn-success" id="botonComprar">COMPRAR</button>
-                        </div>
-                    </div>
-                </div>
-
-                <section class="fondoBlack py-5">
-                    <div class="container">
-                        <div class="row m-auto">
-                            <div class="col-12 text-center text-white mb-5">
-                                <h1>GRACIAS POR ELEGIRNOS</h1>
-                            </div>
-                        </div>
-                        <div>
-                            <div id="imgCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                </div>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active" data-bs-interval="4000">
-                                        <img src="./img/mate4.jpeg" class="d-block w-100 imgIntro" alt="">  
-                                    </div>
-                                
-                                    <div class="carousel-item" data-bs-interval="4000">
-                                        <img src="./img/mate5.jpeg" class="d-block w-100 imgIntro" alt="">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="4000">
-                                        <img src="./img/mateAlfajor.jpg" class="d-block w-100 imgIntro" alt="">
-                                    </div>
-                                </div>
-                                <!--Botones para avanzar y retroceder en el carousel de imágenes - bootstrap-->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#imgCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-    
-                    
-            </div>
-        </div>
 
         <section class="fondoBlack py-5">
             <a name="curarMate"></a>
@@ -462,6 +391,6 @@
     <!-- CDN Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!-- Relacionado a la hoja de JS. -->
-    <script src="proyecto.js"></script>
+    <script src="./js/proyecto.js"></script>
 </body>
 </html>
