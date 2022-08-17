@@ -1,13 +1,16 @@
 
+//Variable
 let botonClick = document.querySelectorAll('.button');
 
-
+//Array Carrito
 let carrito = []
 
+//ForEach botón Agregar producto al carrito | Arrow function
 botonClick.forEach(btn => {
     btn.addEventListener('click', agregarCarrito);
 })
 
+//Función agrega productos y sus elementos
 function agregarCarrito(e){
     const button = e.target;
     const producto = button.closest('.card');
@@ -26,6 +29,7 @@ function agregarCarrito(e){
     agregarProductoCarrito(nuevoProducto)
 }
 
+//Función Agrega productos y no repite | Toastify
 function agregarProductoCarrito(nuevoProducto){
     let existeProducto = false;
     for(let i = 0 ; i < carrito.length ; i++){
@@ -39,7 +43,7 @@ function agregarProductoCarrito(nuevoProducto){
         carrito.push(nuevoProducto);
     }
     
-    guardarSessionStorage();
+    guardarLocalStorage();
 
     Toastify({
         text: "Producto agregado al carrito",
@@ -55,16 +59,17 @@ function agregarProductoCarrito(nuevoProducto){
 
 }
 
-
-function guardarSessionStorage(){
+//Función para guardar en Storage
+function guardarLocalStorage(){
     
-    sessionStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 
 }
 
+//Onload para guardar storage
 window.onload = function(){
 
-    const storage = JSON.parse(sessionStorage.getItem('carrito'));
+    const storage = JSON.parse(LocalStorage.getItem('carrito'));
     if(storage){
       carrito = storage;
     }

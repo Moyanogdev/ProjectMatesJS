@@ -1,54 +1,23 @@
-let tbody = document.querySelector('.tbody');
 
+//Variables
+let tbody = document.querySelector('.tbody');
 let botonCompra = document.getElementById('botonComprar');
 
+//Array Carrito
 let carrito = []
 
+//LocalStorage
 window.onload = function(){
 
-    const storage = JSON.parse(sessionStorage.getItem('carrito'));
+    const storage = JSON.parse(localStorage.getItem('carrito'));
     if(storage){
       carrito = storage;
       renderCarrito()
     }
 }
 
-botonCompra.addEventListener('click', () => {
-    let swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: 'btn btn-success',
-          cancelButton: 'btn btn-danger'
-        },
-        buttonsStyling: false
-      })
-      
-      swalWithBootstrapButtons.fire({
-        title: 'CONFIRMAR COMPRA',
-        text: "¿Estás seguro de realizar la compra?",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Comprar',
-        cancelButtonText: 'Cancelar',
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire(
-            '¡Compra confirmada!',
-            'Generando envío...',
-            'success'
-          )
-        } else if (
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
-          swalWithBootstrapButtons.fire(
-            '¡Compra Cancelada!',
-            '¡Te esperamos la próxima!',
-            'error'
-          )
-        }
-    })
-});
 
+//Función Renderizar Carrito de Compras
 function renderCarrito(){
 
     tbody.innerHTML = '';
@@ -78,6 +47,7 @@ function renderCarrito(){
     carritoTotal();
 }
 
+//Función Calcular la cantidad de los productos y no repetir
 function cantidadSuma(e){
     let sumaElemento = e.target;
     let tr = sumaElemento.closest(".productoCarrito");
@@ -94,6 +64,7 @@ function cantidadSuma(e){
     sessionStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
+//Función Para el total del Carrito
 function carritoTotal(){
     let total = 0;
     let totalCarrito = document.querySelector('.carritoTotal');
@@ -105,9 +76,10 @@ function carritoTotal(){
 
     totalCarrito.innerHTML = `Total $${total}`
 
-    guardarLocalStorage();
+    // guardarLocalStorage();
 }
 
+//Función para eliminar productos del Carrito / Librería Toastify
 function removerProductoCarrito(e){
 
     let botonEliminar = e.target;
@@ -123,7 +95,7 @@ function removerProductoCarrito(e){
 
     tr.remove();
 
-    sessionStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 
     Toastify({
         text: "Producto eliminado del carrito",
@@ -138,4 +110,39 @@ function removerProductoCarrito(e){
 
 }
 
-
+//Compra Final Carrito | Sweet Alert
+botonCompra.addEventListener('click', () => {
+  let swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'CONFIRMAR COMPRA',
+      text: "¿Estás seguro de realizar la compra?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Comprar',
+      cancelButtonText: 'Cancelar',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        swalWithBootstrapButtons.fire(
+          '¡Compra confirmada!',
+          'Generando envío...',
+          'success'
+        )
+      } else if (
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          '¡Compra Cancelada!',
+          '¡Te esperamos la próxima!',
+          'error'
+        )
+      }
+  })
+});
