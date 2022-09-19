@@ -68,19 +68,19 @@ footer{
 }
 
 .productosTabla img{
-    width: 7rem;
+    width: 6rem;
     object-fit: contain;
     border-radius: 6px;
     margin-right: 18px;
 }
 
 .cantidadTabla input{
-    width: 40px;
+    width: 30px;
     border: none;
     outline: 0;
     font-size: 16px;
     font-weight: 700;
-    margin-right: 30px;
+    margin-right: 25px;
     margin-bottom: 20px;
 }
 
