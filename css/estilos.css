@@ -68,10 +68,10 @@ footer{
 }
 
 .productosTabla img{
-    width: 9rem;
+    width: 7rem;
     object-fit: contain;
     border-radius: 6px;
-    margin-right: 20px;
+    margin-right: 18px;
 }
 
 .cantidadTabla input{
@@ -82,4 +82,35 @@ footer{
     font-weight: 700;
     margin-right: 30px;
     margin-bottom: 20px;
+}
+
+/* Otros estilos */
+
+.bi-instagram:hover{
+    color:green;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.bi-whatsapp:hover{
+    color:green;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.bi-facebook:hover{
+    color:green;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.moyanogdev{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.moyanogdev:hover{
+    color: green;
+    transition: .4s ease-in-out;
 }
