@@ -42,6 +42,15 @@ footer{
     object-fit: cover;
 }
 
+.carouselBox{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.carousel-inner{
+    height: 90vh;
+}
+
 
 /*CARRITO*/
 .borrar_producto{
@@ -82,6 +91,11 @@ footer{
     font-weight: 700;
     margin-right: 12px;
     margin-bottom: 20px;
+}
+
+.lastBox{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 /* Otros estilos */
