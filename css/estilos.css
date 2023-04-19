@@ -51,6 +51,18 @@ footer{
     height: 90vh;
 }
 
+@media screen and (max-width: 770px){
+    .carousel-inner{
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .imgPromo{
+        width: 40px;
+        height: 30px;
+    }
+}
+
 
 /*CARRITO*/
 .borrar_producto{
